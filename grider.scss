@@ -1,0 +1,136 @@
+// Mixin for vendor prefixes
+@mixin prefix($property, $value, $prefixes: ()) {
+  @if($property == 'display') {
+    @if($value == 'flex') {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+    }
+  }
+  @else if($property == 'position') {
+    @if($value == 'fixed') {
+      position: -webkit-sticky;
+      position: sticky;
+    }
+  }
+  @else {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+  }
+  #{$property}: $value;
+}
+
+// Mixin to generate proper code for grider
+@mixin generate-grid($resolution) {
+  @for $x from 0 to 13 {
+    [grider-#{$resolution}*="flex-#{$x}"] {
+      @include prefix(flex, $x, webkit);
+    }
+  }
+  @for $x from 0 to 13 {
+    [grider-#{$resolution}*="order-#{$x}"] {
+      order: $x;
+    }
+  }
+  [grider-#{$resolution}*="vertical"] {
+    @include prefix(flex-direction, column, webkit);
+  }
+  [grider-#{$resolution}*="horizontal"] {
+    @include prefix(flex-direction, row, webkit);
+  }
+  [grider-#{$resolution}*="vertical"][grider-#{$resolution}*="reversed"] {
+    @include prefix(flex-direction, column-reverse, webkit);
+  }
+  [grider-#{$resolution}*="horizontal"][grider-#{$resolution}*="reversed"] {
+    @include prefix(flex-direction, row-reverse, webkit);
+  }
+  [grider-#{$resolution}*="center"] {
+    @include prefix(align-items, center, webkit);
+    @include prefix(justify-content, center, webkit);
+  }
+  [grider-#{$resolution}*="vertical"][grider-#{$resolution}*="top"],
+  [grider-#{$resolution}*="horizontal"][grider-#{$resolution}*="left"] {
+    @include prefix(justify-content, flex-start, webkit);
+  }
+  [grider-#{$resolution}*="vertical"][grider-#{$resolution}*="bottom"],
+  [grider-#{$resolution}*="horizontal"][grider-#{$resolution}*="right"] {
+    @include prefix(justify-content, flex-end, webkit);
+  }
+  [grider-#{$resolution}*="vertical"][grider-#{$resolution}*="around"],
+  [grider-#{$resolution}*="horizontal"][grider-#{$resolution}*="around"] {
+    @include prefix(justify-content, space-around, webkit);
+  }
+  [grider-#{$resolution}*="vertical"][grider-#{$resolution}*="between"],
+  [grider-#{$resolution}*="horizontal"][grider-#{$resolution}*="between"] {
+    @include prefix(justify-content, space-between, webkit);
+  }
+  [grider-#{$resolution}*="vertical"][grider-#{$resolution}*="left"],
+  [grider-#{$resolution}*="horizontal"][grider-#{$resolution}*="top"] {
+    @include prefix(align-items, flex-start, webkit);
+  }
+  [grider-#{$resolution}*="vertical"][grider-#{$resolution}*="right"],
+  [grider-#{$resolution}*="horizontal"][grider-#{$resolution}*="bottom"] {
+    @include prefix(align-items, flex-end, webkit);
+  }
+  [grider-#{$resolution}*="vertical"][grider-#{$resolution}*="middleY"],
+  [grider-#{$resolution}*="horizontal"][grider-#{$resolution}*="middleX"] {
+    @include prefix(justify-content, center, webkit);
+  }
+  [grider-#{$resolution}*="vertical"][grider-#{$resolution}*="middleX"],
+  [grider-#{$resolution}*="horizontal"][grider-#{$resolution}*="middleY"] {
+    @include prefix(align-items, center, webkit);
+  }
+  [grider-#{$resolution}*="wrap"] {
+    @include prefix(flex-wrap, wrap, webkit);
+  }
+  [grider-#{$resolution}*="nowrap"] {
+    @include prefix(flex-wrap, nowrap, webkit);
+  }
+  [grider-#{$resolution}*="hidden"] {
+    display: none;
+  }
+  [grider-#{$resolution}*="hidden"] {
+    @include prefix(display, flex, webkit);
+  }
+  [grider-#{$resolution}*="absolute"] {
+    position: absolute;
+  }
+  [grider-#{$resolution}*="relative"] {
+    position: relative;
+  }
+  [grider-#{$resolution}*="fixed"] {
+    @include prefix(position, fixed);
+  }
+  [grider-#{$resolution}*="absolute"] {
+    position: absolute;
+  }
+  [grider-#{$resolution}*="empty"] {
+    visibility: hidden;
+  }
+  [grider-#{$resolution}] {
+    @include prefix(display, flex);
+    @include prefix(box-sizing, border-box, webkit);
+  }
+}
+
+// U can define own resolutions in this list
+$resolutions: 0, 320, 360, 480, 640, 768, 992, 1024, 1280, 1366, 1440, 1536, 1920;
+
+// Some default styles
+[grider] {
+  @include prefix(display, flex);
+  @include prefix(box-sizing, border-box, webkit);
+}
+
+// Function that generates whole content
+@each $resolution in $resolutions {
+  @if $resolution == 0 {
+    @include generate-grid(0);
+  }
+  @else {
+    @media all and (min-width: #{$resolution}px) {
+      @include generate-grid($resolution);
+    }
+  }
+}
