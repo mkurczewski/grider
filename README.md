@@ -57,6 +57,15 @@ It's impossible to make a good grid (or any grid) using only pure attributes. To
 1. Direction of child DOM elements:
 
     - horizontal
+        ```HTML
+        <div grider-0="horizontal">
+              <div>DIV1</div>
+              <div>DIV2</div>
+              <div>DIV3</div>
+              <div>DIV4</div>
+        </div>        
+        ```
+        will generate
         ```
         ___________________
         DIV1 DIV2 DIV3 DIV4
@@ -64,6 +73,15 @@ It's impossible to make a good grid (or any grid) using only pure attributes. To
         ```
        
     - vertical
+        ```HTML
+        <div grider-0="vertical">
+              <div>DIV1</div>
+              <div>DIV2</div>
+              <div>DIV3</div>
+              <div>DIV4</div>
+        </div>        
+        ```
+        will generate
         ```
         ___________________
         DIV1  
@@ -74,6 +92,15 @@ It's impossible to make a good grid (or any grid) using only pure attributes. To
         ```
        
     - reversed (with horizontal)
+        ```HTML
+        <div grider-0="horizontal reversed">
+              <div>DIV1</div>
+              <div>DIV2</div>
+              <div>DIV3</div>
+              <div>DIV4</div>
+        </div>        
+        ```
+        will generate
         ```
         ___________________
         DIV4 DIV3 DIV2 DIV1
@@ -81,6 +108,15 @@ It's impossible to make a good grid (or any grid) using only pure attributes. To
         ```
        
     - reversed (with vertical)
+        ```HTML
+        <div grider-0="vertical reversed">
+              <div>DIV1</div>
+              <div>DIV2</div>
+              <div>DIV3</div>
+              <div>DIV4</div>
+        </div>        
+        ```
+        will generate
         ```
         ___________________
         DIV4  
@@ -91,7 +127,7 @@ It's impossible to make a good grid (or any grid) using only pure attributes. To
         ```
        
 
-2. Position of child DOM elements:
+2. Position of child DOM elements (`horizontal` or `vertical` for each RWD breakpoint value must be defined):
 
     - left
         ```
