@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grider demo</title>
+    <link href="reset.min.css" rel="stylesheet"/>
+    <link href="grider.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<style>
+    * {
+        font-family: Consolas, monospace;
+    }
+    h1 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    textarea {
+        background: #F0F0F0;
+        padding: 20px;
+        margin: 0;
+        width: 100%;
+        resize: none;
+        border: none;
+        font-size: 14px;
+        line-height: 14px;
+        margin-top: 14px;
+        outline: none;
+        box-sizing: border-box;
+    }
+    hr {
+        margin: 30px 0;
+    }
+    body {
+        width: 100%;
+        max-width: 800px;
+        margin: 40px auto;
+    }
+    div {
+        background: rgba(0,0,0,.1);
+        padding: 6px;
+    }
+    body > div {
+        min-height: 100px;
+    }
+    body > div[grider-0*="vertical"] {
+        min-height: 230px;
+    }
+    div > div {
+        margin: 6px;
+    }
+</style>
+
+<h1>Grider demos</h1>
+
+<hr>
+<h2>Position</h2>
+<hr>
+
+<div grider-0="horizontal">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="horizontal reversed">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal reversed">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="horizontal reversed right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal reversed right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="horizontal reversed center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal reversed center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="horizontal center right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal center right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="horizontal middleY right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal middleY right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="horizontal center between">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal center between">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="horizontal center around">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal center around">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="horizontal center bottom">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal center bottom">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="vertical center bottom">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="vertical center bottom">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="vertical right bottom">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="vertical right bottom">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="vertical between">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="vertical between">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div></textarea>
+
+
+<hr>
+
+<div grider-0="horizontal">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+    <div>16</div>
+    <div>17</div>
+    <div>18</div>
+    <div>19</div>
+    <div>20</div>
+    <div>21</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal">
+    <div>1</div>
+    <div>2</div>
+    ...
+    <div>21</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="horizontal wrap">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+    <div>16</div>
+    <div>17</div>
+    <div>18</div>
+    <div>19</div>
+    <div>20</div>
+    <div>21</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal wrap">
+    <div>1</div>
+    <div>2</div>
+    ...
+    <div>21</div>
+</div></textarea>
+
+
+
+<hr>
+<h2>Scale</h2>
+
+<hr>
+<div grider-0="horizontal center">
+    <div grider-0="flex-1">1</div>
+    <div grider-0="flex-2">2</div>
+    <div grider-0="flex-3">3</div>
+    <div grider-0="flex-4">4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal center">
+    <div grider-0="flex-1">1</div>
+    <div grider-0="flex-2">2</div>
+    <div grider-0="flex-3">3</div>
+    <div grider-0="flex-4">4</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="horizontal center">
+    <div grider-0="flex-1">1</div>
+    <div grider-0="flex-1">2</div>
+    <div grider-0="flex-1">3</div>
+    <div grider-0="flex-1">4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal center">
+    <div grider-0="flex-1">1</div>
+    <div grider-0="flex-1">2</div>
+    <div grider-0="flex-1">3</div>
+    <div grider-0="flex-1">4</div>
+</div></textarea>
+
+
+<hr>
+
+<div grider-0="horizontal center">
+    <div grider-0="flex-1">1</div>
+    <div grider-0="flex-1">2</div>
+    <div grider-0="flex-2">3</div>
+</div>
+
+<textarea rows="5" disabled><div grider-0="horizontal center">
+    <div grider-0="flex-1">1</div>
+    <div grider-0="flex-1">2</div>
+    <div grider-0="flex-2">3</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="horizontal center">
+    <div grider-0="flex-0">1</div>
+    <div grider-0="flex-1">2</div>
+    <div grider-0="flex-1">3</div>
+    <div grider-0="flex-1">4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal center">
+    <div grider-0="flex-0">1</div>
+    <div grider-0="flex-1">2</div>
+    <div grider-0="flex-1">3</div>
+    <div grider-0="flex-1">4</div>
+</div></textarea>
+
+
+<hr>
+
+<div grider-0="horizontal">
+    <div grider-0="flex-1">1</div>
+</div>
+
+<textarea rows="3" disabled><div grider-0="horizontal">
+    <div grider-0="flex-1">1</div>
+</div></textarea>
+
+<hr>
+<h2>Order</h2>
+<hr>
+
+<div grider-0="horizontal center">
+    <div grider-0="order-2">1</div>
+    <div grider-0="order-1">2</div>
+    <div grider-0="order-4">3</div>
+    <div grider-0="order-3">4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal center">
+    <div grider-0="order-2">1</div>
+    <div grider-0="order-1">2</div>
+    <div grider-0="order-4">3</div>
+    <div grider-0="order-3">4</div>
+</div></textarea>
+
+<hr>
+
+<div grider-0="horizontal reversed center">
+    <div grider-0="order-2">1</div>
+    <div grider-0="order-1">2</div>
+    <div grider-0="order-4">3</div>
+    <div grider-0="order-3">4</div>
+</div>
+
+<textarea rows="6" disabled><div grider-0="horizontal reversed center">
+    <div grider-0="order-2">1</div>
+    <div grider-0="order-1">2</div>
+    <div grider-0="order-4">3</div>
+    <div grider-0="order-3">4</div>
+</div></textarea>
+
+</body>
+</html>

@@ -43,7 +43,7 @@ to use it just type
 ## RWD
 Grider supports <i>mobile first</i> phillosophy, so each `grider-X` attribute means
 ```CSS
-@media all and (min-width: X) {
+@media all and (min-width: X px) {
     /* some styles */
 }
 ```
@@ -51,211 +51,30 @@ In consequence, attribute `grider-360` will work on every browser with width `>=
 Note that overwriting styles applies only to opposing values (for ex. `vertical` and `horizontal`).
 
 ## Values (of attributes)
-It's impossible to make a good grid (or any grid) using only pure attributes. To see the effects we need to fill them with some values.
+It's impossible to make a good grid (or any grid) using only pure attributes. To see the effects we need to fill them with some values from the list below:
 
+- horizontal
+- vertical
+- reversed
+- center
+- top
+- bottom
+- left
+- right
+- middleX
+- middleY
+- between
+- around
+- wrap
+- nowrap
+- hidden
+- visible
+- empty
+- absolute
+- relative
+- fixed
+- flex-X (where X is from range 0 - 12)
+- order-X (where X is from range 0 - 12)
 
-1. Direction of child DOM elements:
-
-    - horizontal
-        ```HTML
-        <div grider-0="horizontal">
-              <div>DIV1</div>
-              <div>DIV2</div>
-              <div>DIV3</div>
-              <div>DIV4</div>
-        </div>        
-        ```
-        will generate
-        ```
-        ___________________
-        DIV1 DIV2 DIV3 DIV4
-        ___________________
-        ```
-       
-    - vertical
-        ```HTML
-        <div grider-0="vertical">
-              <div>DIV1</div>
-              <div>DIV2</div>
-              <div>DIV3</div>
-              <div>DIV4</div>
-        </div>        
-        ```
-        will generate
-        ```
-        ___________________
-        DIV1  
-        DIV2  
-        DIV3  
-        DIV4
-        ___________________
-        ```
-       
-    - reversed (with horizontal)
-        ```HTML
-        <div grider-0="horizontal reversed">
-              <div>DIV1</div>
-              <div>DIV2</div>
-              <div>DIV3</div>
-              <div>DIV4</div>
-        </div>        
-        ```
-        will generate
-        ```
-        ___________________
-        DIV4 DIV3 DIV2 DIV1
-        ___________________
-        ```
-       
-    - reversed (with vertical)
-        ```HTML
-        <div grider-0="vertical reversed">
-              <div>DIV1</div>
-              <div>DIV2</div>
-              <div>DIV3</div>
-              <div>DIV4</div>
-        </div>        
-        ```
-        will generate
-        ```
-        ___________________
-        DIV4  
-        DIV3  
-        DIV2  
-        DIV1  
-        ___________________
-        ```
-       
-
-2. Position of child DOM elements (`horizontal` or `vertical` for each RWD breakpoint value must be defined):
-
-    - left
-        ```
-        ___________________
-        DIV
-          
-          
-          
-        ___________________
-        ```
-       
-    - center (with vertical)
-        ```
-        ___________________
-                  
-                  
-                DIV
-                  
-        __________________
-       ```
-    - right
-        ```
-        ___________________
-                        DIV
-                  
-                
-                  
-        __________________
-       ```
-    - top
-        ```
-        ___________________
-        DIV                
-                  
-                
-                  
-        __________________
-       ```
-    - bottom
-        ```
-        ___________________
-                        
-                  
-                
-                  
-        DIV_______________
-       ```
-    - middleX
-        ```
-        ___________________
-               DIV       
-                  
-                
-                  
-        __________________
-       ```
-    - middleY
-        ```
-        ___________________
-                      
-                  
-         DIV       
-                  
-        __________________
-       ```
-    - between (with horizontal)
-        ```
-        ___________________
-        DIV             DIV
-                  
-                
-                  
-        __________________
-       ```
-    - between (with vertical)
-        ```
-        ___________________
-        DIV             
-                  
-                
-                  
-        DIV_______________
-       ```
-    - around (with horizontal)
-        ```
-        ___________________
-            DIV      DIV
-                  
-                
-                  
-        __________________
-       ```
-    - around (with vertical)
-        ```
-        ___________________
-                     
-        DIV          
-                
-        DIV       
-        __________________
-       ```
-    - wrap
-        ```
-        ___________________
-                     
-        DIV DIV DIV DIV DIV 
-        DIV DIV        
-              
-        __________________
-       ```
-    - nowrap
-        ```
-        ___________________
-                     
-        DIVDIVDIVDIVDIVDIVDIV 
-        
-              
-        __________________
-       ```
-    
-
-3. Additional attributes:
-    
-    - hidden (`display: none`)
-    - visible (`display: flex`)
-    - empty (`visibility: hidden`)
-    - absolute (`position: absolute`)
-    - relative (`position: relative`)
-    - fixed (`position: fixed`)
-    - flex-X (where X is from range 0 - 12, in CSS: `flex: X`)
-    - order-X (where X is from range 0 - 12, in CSS `order: X`)
+## Demos
+YOu can find more demos [here](http://00.cba.pl/grider/)
