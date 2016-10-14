@@ -53,32 +53,43 @@ Note that overwriting styles applies only to opposing values (for ex. `vertical`
 ## Values (of attributes)
 It's impossible to make a good grid (or any grid) using only pure attributes. To see the effects we need to fill them with some values.
 
+
 1. Direction of child DOM elements:
 
     - horizontal
-       ```
-       DIV1  DIV2  DIV3  DIV4 
-       ```
+        ```
+        ___________________
+        DIV1 DIV2 DIV3 DIV4
+        ___________________
+        ```
+       
     - vertical
         ```
-         ___________________
-         DIV1  
-         DIV2    
-         DIV3  
-         DIV4  
-         ___________________
-         ```
+        ___________________
+        DIV1  
+        DIV2  
+        DIV3  
+        DIV4
+        ___________________
+        ```
+       
     - reversed (with horizontal)
         ```
-       DIV4  DIV3  DIV2  DIV1 
-       ```
+        ___________________
+        DIV4 DIV3 DIV2 DIV1
+        ___________________
+        ```
+       
     - reversed (with vertical)
         ```
-       DIV4  
-       DIV3  
-       DIV2  
-       DIV1   
-       ```
+        ___________________
+        DIV4  
+        DIV3  
+        DIV2  
+        DIV1  
+        ___________________
+        ```
+       
 
 2. Position of child DOM elements:
 
