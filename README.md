@@ -77,4 +77,4 @@ It's impossible to make a good grid (or any grid) using only pure attributes. To
 - order-X (where X is from range 0 - 12)
 
 ## Demos
-YOu can find more demos [here](http://00.cba.pl/grider/)
+You can find more demos [here](http://00.cba.pl/grider/)
