@@ -2,7 +2,7 @@
 
 ## What is this?
 Grider is a simple and lightweight CSS framework that allows you to create fully responsive flexbox grid for your website quick and effective.  
-It is basically set of CSS styles but you don't need to use additional classes in your HTML file (like in Bootstrap).  
+It's basically a set of CSS styles, but you don't need to use additional classes in your HTML file (like in Bootstrap).  
 <b>Note that you should know basics of flexbox (more at [https://css-tricks.com/snippets/css/a-guide-to-flexbox/](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)).</b>
 
 ## How to use?
@@ -13,11 +13,11 @@ It is basically set of CSS styles but you don't need to use additional classes i
 
 ## Attributes
 According to what what RWD breakpoints you were defined, you can use corresponding attributes.    
-For example, if we defined these breakpoints:
+For example, if you defined these breakpoints:
 ```SCSS
 $resolutions: 0, 360, 768, 992, 1280;
 ```
-we can write something like
+you can write something like
 ```HTML
 <div grider-0="data"></div>
 ```
@@ -27,7 +27,7 @@ or
 </div>
 ```
 
-Additionally, no matter what breakpoints we were defined, there is always available pure `grider` attribute which basically means
+Additionally, no matter what breakpoints you were defined, there is always available pure `grider` attribute which basically means
 ```CSS
 [grider] {
     display: flex;
