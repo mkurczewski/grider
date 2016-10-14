@@ -3,7 +3,7 @@
 ## What is this?
 Grider is a simple and lightweight CSS framework that allows you to create fully responsive flexbox grid for your website quick and effective.  
 It is basically set of CSS styles but you don't need to use additional classes in your HTML file (like in Bootstrap).  
-Note that you should know basics of flexbox (more at [https://css-tricks.com/snippets/css/a-guide-to-flexbox/](https://css-tricks.com/snippets/css/a-guide-to-flexbox/))
+<b>Note that you should know basics of flexbox (more at [https://css-tricks.com/snippets/css/a-guide-to-flexbox/](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)).</b>
 
 ## How to use?
 1. Copy `grider.scss` to your styles directory and import it in your main stylesheet.
