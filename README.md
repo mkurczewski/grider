@@ -61,10 +61,10 @@ It's impossible to make a good grid (or any grid) using only pure attributes. To
        ```
     - vertical
         ```
-        DIV1
-        DIV2
-        DIV3
-        DIV4 
+        DIV1  
+        DIV2  
+        DIV3  
+        DIV4   
         ```
     - reversed (with horizontal)
         ```
@@ -72,10 +72,10 @@ It's impossible to make a good grid (or any grid) using only pure attributes. To
        ```
     - reversed (with vertical)
         ```
-       DIV4
-       DIV3
-       DIV2
-       DIV1 
+       DIV4  
+       DIV3  
+       DIV2  
+       DIV1   
        ```
 
 2. Position of child DOM elements:
