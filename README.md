@@ -61,11 +61,13 @@ It's impossible to make a good grid (or any grid) using only pure attributes. To
        ```
     - vertical
         ```
-        DIV1  
-        DIV2  
-        DIV3  
-        DIV4   
-        ```
+         ___________________
+         DIV1  
+         DIV2    
+         DIV3  
+         DIV4  
+         ___________________
+         ```
     - reversed (with horizontal)
         ```
        DIV4  DIV3  DIV2  DIV1 
